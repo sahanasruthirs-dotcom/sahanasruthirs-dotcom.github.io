@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sahana Sruthi R.S | AI &amp; Data Analytics Portfolio</title>
+<meta name="description" content="Portfolio of Sahana Sruthi R.S, B.Tech student in Computer Science (AI &amp; Data Analytics): machine learning, computer vision and Python projects.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A7%A0%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F2F5F7; --surface:#FFFFFF; --ink:#14213D; --muted:#55627A;
+  --line:#D3DBE4; --accent:#2B59FF; --accent-ink:#FFFFFF; --box:#16A36A;
+  --display:"Bricolage Grotesque","Segoe UI",Arial,sans-serif;
+  --body:"IBM Plex Sans","Segoe UI",Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1626; --surface:#17203A; --ink:#E8EDF7; --muted:#9AA7C0;
+    --line:#2A3556; --accent:#7C9BFF; --accent-ink:#0F1626; --box:#3DD598;
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 var(--body)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:60rem;margin:0 auto;padding:0 1.25rem}
+header.top{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding-top:.8rem;padding-bottom:.8rem}
+.brand{font:700 1.05rem var(--display);text-decoration:none}
+nav{display:flex;gap:1.2rem;flex-wrap:wrap}
+nav a{text-decoration:none;color:var(--muted);font-weight:500;font-size:.95rem}
+nav a:hover{color:var(--accent)}
+
+.hero{padding:4.5rem 0 3.5rem}
+.detect{position:relative;display:inline-block;border:2.5px solid var(--box);padding:1.1rem 1.4rem 1.2rem;margin-top:1.6rem}
+.detect::before{content:"student  1.00";position:absolute;left:-2.5px;top:-1.7rem;background:var(--box);color:#fff;
+  font:500 .78rem/1.7rem var(--body);padding:0 .6rem;white-space:nowrap}
+.detect::after{content:"";position:absolute;right:-7px;bottom:-7px;width:11px;height:11px;background:var(--box)}
+.hero h1{font:700 clamp(2.4rem,7vw,4.6rem)/1.02 var(--display);letter-spacing:-.02em;margin:0}
+.hero .role{font:500 clamp(1.05rem,2.4vw,1.35rem) var(--display);margin:1.6rem 0 .4rem}
+.hero p.lead{max-width:38rem;color:var(--muted);margin:.4rem 0 1.6rem}
+.btns{display:flex;gap:.8rem;flex-wrap:wrap}
+.btn{display:inline-block;padding:.7rem 1.2rem;border-radius:6px;font-weight:500;text-decoration:none;border:1.5px solid var(--ink)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn:hover{transform:translateY(-1px)}
+
+section{padding:3rem 0;border-top:1px solid var(--line)}
+h2{font:700 clamp(1.6rem,3.6vw,2.1rem)/1.15 var(--display);letter-spacing:-.01em;margin:0 0 1.4rem}
+.about{display:grid;grid-template-columns:1fr;gap:1.2rem}
+.about p{margin:0;max-width:42rem}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem;margin-top:.6rem}
+.fact{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:1rem 1.1rem}
+.fact b{display:block;font:700 1rem var(--display);margin-bottom:.15rem}
+.fact span{color:var(--muted);font-size:.95rem}
+
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:1.4rem 2rem;margin:0}
+.skills dt{font:700 1rem var(--display);margin-bottom:.3rem}
+.skills dd{margin:0;color:var(--muted)}
+
+.projects{list-style:none;margin:0;padding:0}
+.project{display:grid;grid-template-columns:1fr auto;gap:.4rem 1.5rem;padding:1.5rem 0;border-bottom:1px solid var(--line)}
+.project:first-child{padding-top:0}
+.project h3{font:700 1.3rem var(--display);margin:0}
+.project p{margin:.35rem 0 .7rem;max-width:40rem;grid-column:1}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem;grid-column:1;margin:0;padding:0;list-style:none}
+.chips li{font-size:.82rem;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:.1rem .7rem;color:var(--muted)}
+.repo{grid-column:2;grid-row:1;align-self:start;font-weight:500;color:var(--accent);text-decoration:none;border-bottom:1.5px solid currentColor;white-space:nowrap}
+.repo:hover{opacity:.8}
+
+.certs{display:grid;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr));gap:1.4rem 2rem}
+.certs h3{font:700 1rem var(--display);margin:0 0 .3rem}
+.certs ul{margin:0;padding-left:1.1rem;color:var(--muted)}
+
+.contact p{max-width:38rem;margin:0 0 1.2rem}
+.links{display:flex;flex-wrap:wrap;gap:.8rem}
+footer{padding:2rem 0 3rem;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+
+@media (max-width:40rem){
+  nav{display:none}
+  .project{grid-template-columns:1fr}
+  .repo{grid-column:1;grid-row:auto}
+  .hero{padding-top:3rem}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn:hover{transform:none}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">Sahana Sruthi R.S</a>
+    <nav aria-label="Sections">
+      <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a>
+      <a href="#certifications">Certifications</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <div class="detect"><h1>Sahana Sruthi R.S</h1></div>
+    <p class="role">Computer Science student · AI &amp; Data Analytics</p>
+    <p class="lead">I build machine learning and computer vision projects in Python, from stock forecasting with LSTMs to face and object detection. I'm looking for a Python developer internship.</p>
+    <div class="btns">
+      <a class="btn primary" href="#projects">View projects</a>
+      <a class="btn" href="Sahana_Sruthi_RS_Resume.pdf">Download resume</a>
+    </div>
+  </div>
+
+  <section id="about"><div class="wrap">
+    <h2>About me</h2>
+    <div class="about">
+      <p>I'm a B.Tech student in Computer Science Engineering, specializing in Artificial Intelligence and Data Analytics. I have a strong base in Python, object-oriented programming, and data structures and algorithms, and I learn best by building working projects.</p>
+      <div class="facts">
+        <div class="fact"><b>Education</b><span>B.Tech CSE (AI &amp; Data Analytics), Sri Ramachandra Institute of Higher Education and Research, expected 2028</span></div>
+        <div class="fact"><b>Focus</b><span>Machine learning, computer vision, data analysis</span></div>
+        <div class="fact"><b>Languages</b><span>English, Tamil, Hindi</span></div>
+      </div>
+    </div>
+  </div></section>
+
+  <section id="skills"><div class="wrap">
+    <h2>Skills</h2>
+    <dl class="skills">
+      <div><dt>Programming</dt><dd>Python (Core, OOP), C, Java (basics), JavaScript, SQL (MySQL)</dd></div>
+      <div><dt>Python and ML libraries</dt><dd>OpenCV, NumPy, Pandas, Matplotlib, Scikit-learn, TensorFlow</dd></div>
+      <div><dt>Web</dt><dd>HTML5, CSS3, JavaScript</dd></div>
+      <div><dt>Tools</dt><dd>Git, GitHub, VS Code</dd></div>
+      <div><dt>Core concepts</dt><dd>Data structures and algorithms, OOP, debugging, data visualization, computer vision</dd></div>
+    </dl>
+  </div></section>
+
+  <section id="projects"><div class="wrap">
+    <h2>Projects</h2>
+    <ul class="projects">
+      <!-- Replace each href with the real repository link after you upload your code -->
+      <li class="project">
+        <h3>Tesla Autopilot Clone: object detection</h3>
+        <a class="repo" href="https://github.com/sahanasruthirs-dotcom/object-detection-autopilot">View code</a>
+        <p>Detects vehicles, pedestrians and road elements in driving footage, drawing labeled bounding boxes frame by frame in real time.</p>
+        <ul class="chips"><li>Python</li><li>OpenCV</li><li>TensorFlow</li></ul>
+      </li>
+      <li class="project">
+        <h3>Tesla stock price forecasting with LSTM</h3>
+        <a class="repo" href="https://github.com/sahanasruthirs-dotcom/tesla-stock-lstm-forecasting">View code</a>
+        <p>An LSTM model that forecasts Tesla stock prices from historical time-series data, using scaling and sliding-window sequences, then compares predictions with actual prices.</p>
+        <ul class="chips"><li>Python</li><li>TensorFlow</li><li>Pandas</li><li>Matplotlib</li></ul>
+      </li>
+      <li class="project">
+        <h3>Facial recognition system</h3>
+        <a class="repo" href="https://github.com/sahanasruthirs-dotcom/facial-recognition-system">View code</a>
+        <p>Detects and identifies faces from images and live webcam video by encoding and matching registered individuals in real time.</p>
+        <ul class="chips"><li>Python</li><li>OpenCV</li></ul>
+      </li>
+      <li class="project">
+        <h3>Google Street View: landmark recognition</h3>
+        <a class="repo" href="https://github.com/sahanasruthirs-dotcom/landmark-recognition-cnn">View code</a>
+        <p>An image classification model that recognizes landmarks from Street View-style images, trained with augmented data to generalize to new scenes.</p>
+        <ul class="chips"><li>Python</li><li>TensorFlow</li><li>OpenCV</li><li>NumPy</li></ul>
+      </li>
+      <li class="project">
+        <h3>CarDekho car price prediction</h3>
+        <a class="repo" href="https://github.com/sahanasruthirs-dotcom/car-price-prediction">View code</a>
+        <p>A regression model that predicts used-car selling prices from the CarDekho dataset, using features such as car age, fuel type, transmission and kilometers driven.</p>
+        <ul class="chips"><li>Python</li><li>Pandas</li><li>Scikit-learn</li></ul>
+      </li>
+      <li class="project">
+        <h3>Google Pay expense sharing</h3>
+        <a class="repo" href="https://github.com/sahanasruthirs-dotcom/expense-sharing-app">View code</a>
+        <p>An expense-sharing app modeled on Google Pay's split feature. Groups record shared expenses, split them equally or by custom shares, and see who owes whom.</p>
+        <ul class="chips"><li>Python</li><li>SQL</li></ul>
+      </li>
+    </ul>
+  </div></section>
+
+  <section id="certifications"><div class="wrap">
+    <h2>Certifications</h2>
+    <div class="certs">
+      <div><h3>IBM</h3><ul>
+        <li>Data Analytics Specialization (5-course series)</li><li>Python Developer</li>
+        <li>Z Skills and Architecture</li><li>Modernization and Cloud Security</li></ul></div>
+      <div><h3>HCL GUVI</h3><ul><li>Machine Learning</li><li>JavaScript</li><li>MySQL</li></ul></div>
+    </div>
+  </div></section>
+
+  <section id="contact" class="contact"><div class="wrap">
+    <h2>Contact</h2>
+    <p>I'm open to Python developer internships. Email is the quickest way to reach me.</p>
+    <div class="links">
+      <a class="btn primary" href="mailto:sahanasruthirs@gmail.com">Email me</a>
+      <a class="btn" href="https://www.linkedin.com/in/sahana-sruthi-r-s-4612b4315">LinkedIn</a>
+      <a class="btn" href="https://github.com/sahanasruthirs-dotcom">GitHub</a>
+    </div>
+  </div></section>
+</main>
+
+<footer><div class="wrap">© 2026 Sahana Sruthi R.S · Chennai, India</div></footer>
+</body>
+</html>
